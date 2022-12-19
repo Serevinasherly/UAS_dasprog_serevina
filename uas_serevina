@@ -1,0 +1,113 @@
+#Ujian Akhir Semester
+<br>Mata Kuliah : Dasar Pemograman
+<br> Nama : Serevina Sherly Maulida
+‹br>NIM : 1227050123
+«br>Jurusan :
+[Teknik Informatika]
+(http://if.uinsgd.ac.id/l
+[UIN Sunan Gunung Djati
+Bandung]
+(https://uinsgd.ac.id/)
+## Deskripsi Umum
+Pengertian Array
+Array adalah sebuah variabel yang punya kemampuan untuk menyimpan lebih dari 1 nilai yang memiliki tipe yang sama. Atau dalam kata lain array adalah sekumpulan data dengan tipe data yang sama.
+Selengkapnya : 
+Pengertian Array 2 Dimensi
+Array 2 dimensi adalah array yang memiliki lebih 2 bentuk index array. Jika pada array 1 dimensi hanya memiliki satu bentuk index, di array 2 dimensi atau bisa kita sebut array multidimensi memiliki lebih dari satu bentuk index array.
+
+Disini saya membuat program : 
+1. Menginput banyak nya baris dan kolom yang setelah diinput diisi nilai, dan ketika ditukar kolom maka akan menjadi baris, dan baris akan menjadi kolom
+2. Membuat program dengan array 2 dimensi,dan ketika diinput akan menampilkan angka-angka yang bilangannya bisa habis dibagi 3,5,dan 7
+## Source Code
+#include <iostream>
+using namespace std;
+ int main () {
+cout << "Nama	: serevina sherly maulida"<<endl;
+cout << "NIM	: 1227050123"<<endl;
+cout<<"==========================================================================================="<<endl;
+cout <<" Input banyaknya baris dan kolom, kemudian tukar kolom jadi baris dan sebaliknya"<<endl;
+cout <<"==========================================================================================="<<endl<<endl;
+
+ int nilai[100][100];
+  int baris, kolom, a, j;
+ 
+  cout << "Input jumlah baris matriks: ";
+  cin >> baris;
+ 
+  cout << "Input jumlah kolom matriks: ";
+  cin >> kolom;
+  cout << endl;
+ 
+  // proses input array
+  for(a = 0; a < baris ; a++){
+    for(j = 0; j < kolom; j++){
+      cout << "Baris " <<a+1<<", kolom "<<j+1<< " = ";
+      cin >> nilai[a][j];
+    }
+    cout << endl;
+  }
+ 
+  cout << "Hasil matriks normal " << endl<<endl;
+ 
+  // menampilkan array
+  for(a = 0; a < baris ; a++){
+    for(j = 0; j < kolom; j++){
+      cout  << nilai[a][j] << " ";
+    }
+    cout <<endl;
+  }
+   cout <<endl<< "Hasil matriks yang ditukar"<<endl<<endl;
+   for(a = 0; a < kolom ; a++){
+    for(j = 0; j < baris; j++){
+      cout  << nilai[j][a] << " ";
+    }
+    cout << endl;
+  }
+
+  cout <<endl<<"================================================================================================="<<endl;
+  cout <<"Pada array 2 dimensi, Input angka-angka kemudian di tampilkan bilangan yang habis dibagi 3,5,7 "<<endl;
+  cout <<"================================================================================================="<<endl<<endl;
+  	
+  	cout << "Bilangan yang habis di bagi 3,5,7: "<<endl<<endl;
+for (int a = 0; a < kolom; a++){
+for (int j = 0; j < baris; j++){
+if (nilai[a][j] % 3 == 0|| nilai [a][j] % 5 ==0||nilai [a][j] %7 ==0) cout << nilai[a][j] << ", "; // Mencetak bilangan yang habis di bagi 3
+	}
+}
+
+  
+ 
+  return 0;
+}
+
+## Output
+Baris 1, kolom 3 = 3
+Baris 1, kolom 4 = 5
+
+Baris 2, kolom 1 = 7
+Baris 2, kolom 2 = 9
+Baris 2, kolom 3 = 5
+Baris 2, kolom 4 = 6
+
+Hasil matriks normal
+
+4 2 3 5
+7 9 5 6
+
+Hasil matriks yang ditukar
+
+4 7
+2 9
+3 5
+5 6
+
+=================================================================================================
+Pada array 2 dimensi, Input angka-angka kemudian di tampilkan bilangan yang habis dibagi 3,5,7
+=================================================================================================
+
+Bilangan yang habis di bagi 3,5,7:
+
+7, 9, 0, 0, 0, 0,
+--------------------------------
+Process exited after 57.26 seconds with return value 0
+Press any key to continue . . .
